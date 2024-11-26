@@ -6,10 +6,8 @@ def job_scheduling(jobs, m):
         min_machine = min(range(m), key=lambda x: machines[x])
         machines[min_machine] += job  
         assignment.append(min_machine + 1)
-
     return assignment, machines  
-
-jobs = [10, 20, 30, 40, 50, 60]  # List of jobs
+jobs = [10, 20, 30, 40, 50, 60]
 machines = 3  
 assignment, times = job_scheduling(jobs, machines)
 for i, job in enumerate(jobs):
